@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yirs.Core.Dao.EmployeeMapper">
+
+	<!-- 批量添加人员 -->
+	<insert id="insertBatch" parameterType="List">
+		insert
+		employee(user_id,birth_time,sex_type,marriage,address,major,name,mobile,highest_edu,graduate_school,graduation_time)
+		values
+			<foreach collection="list" item="item"
+				separator=",">
+				(#{item.userId},#{item.birthTime},#{item.sexType},#{item.marriage},
+				#{item.address},#{item.major},#{item.name},#{item.mobile},
+				#{item.highestEdu},#{item.graduateSchool},#{item.graduationTime})
+			</foreach>
+	</insert>
+
+</mapper>
