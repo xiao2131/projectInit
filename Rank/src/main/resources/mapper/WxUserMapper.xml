@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yirs.Demo.mapper.WxUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yirs.Demo.entity.WxUser">
+        <id column="openid" property="openid" />
+        <result column="nick_name" property="nickName" />
+        <result column="avatar_url" property="avatarUrl" />
+    </resultMap>
+
+</mapper>

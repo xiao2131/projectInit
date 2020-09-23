@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yirs.Demo.mapper.SchoolMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yirs.Demo.entity.School">
+        <id column="id" property="id" />
+        <result column="school_id" property="schoolId" />
+        <result column="school_name" property="schoolName" />
+        <result column="school_major" property="schoolMajor" />
+        <result column="number" property="number" />
+        <result column="site" property="site" />
+    </resultMap>
+    
+
+    
+
+</mapper>
